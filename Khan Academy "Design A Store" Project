@@ -1,0 +1,28 @@
+CREATE TABLE teacher_supply_store
+(id INTEGER PRIMARY KEY, item TEXT, price INTEGER, amount_per_pack INTEGER, 
+amount_purchased INTEGER);
+
+INSERT INTO teacher_supply_store VALUES(1, "pencils", 6.99, 24, 5);
+INSERT INTO teacher_supply_store VALUES(2, "sticky notes", 1.99, 3, 5);
+INSERT INTO teacher_supply_store VALUES(3, "gel pens", 15.99, 12, 2);
+INSERT INTO teacher_supply_store VALUES(4, "cap erasers", 8.99, 50, 4);
+INSERT INTO teacher_supply_store VALUES(5, "Expo markers", 8.49, 10, 3);
+INSERT INTO teacher_supply_store VALUES(6, "pearl erasers", 7.98, 50, 4);
+INSERT INTO teacher_supply_store VALUES(7, "hot glue gun", 19.98, 1, 1);
+INSERT INTO teacher_supply_store VALUES(8, "hot glue sticks", 11.99, 50, 1);
+INSERT INTO teacher_supply_store VALUES(9, "150 sheets of notebook paper", 10.49, 3, 2);
+INSERT INTO teacher_supply_store VALUES(10, "box of printer paper", 49.99, 12, 1);
+INSERT INTO teacher_supply_store VALUES(11, "sharpies", 8.99, 12, 2);
+INSERT INTO teacher_supply_store VALUES(12, "stapler", 12.99, 1, 1);
+INSERT INTO teacher_supply_store VALUES(13, "box of staples", 3.99, 20, 2);
+INSERT INTO teacher_supply_store VALUES(14, "scotch tape", 5.98, 2, 2);
+INSERT INTO teacher_supply_store VALUES(15, "scissors", 9.99, 2, 1);
+
+SELECT * 
+FROM teacher_supply_store;
+
+SELECT item, price*amount_purchased AS cost_per_item
+FROM teacher_supply_store;
+
+SELECT SUM(price*amount_purchased) AS total_price
+FROM teacher_supply_store;
