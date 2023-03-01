@@ -1,0 +1,27 @@
+CREATE TABLE Facebook
+    (id INTEGER PRIMARY KEY,
+    post TEXT,
+    likes INTEGER,
+    shares INTEGER,
+    comments TEXT);
+
+INSERT into Facebook VALUES (1, "picture of dog", "33", "12", "So cute!");
+
+INSERT into Facebook VALUES (2, "status about football game", "21", "4", "Roll Tide!");
+
+INSERT into Facebook VALUES (3, "update on family member", "57", "26", "Great to hear!");
+
+SELECT * 
+FROM Facebook;
+
+UPDATE Facebook set likes = "36", shares = "15" 
+WHERE id = 1;
+
+SELECT * 
+FROM Facebook;
+
+DELETE FROM Facebook 
+WHERE id = 2;
+
+SELECT * 
+FROM Facebook;
