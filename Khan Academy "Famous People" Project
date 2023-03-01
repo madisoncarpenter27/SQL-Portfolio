@@ -1,0 +1,70 @@
+CREATE TABLE country_singers (id INTEGER PRIMARY KEY, name TEXT);
+
+INSERT INTO country_singers VALUES(1, 'Tim McGraw');
+INSERT INTO country_singers VALUES(2, 'George Strait');
+INSERT INTO country_singers VALUES(3, 'Brad Paisley');
+INSERT INTO country_singers VALUES(4, 'Eric Church');
+INSERT INTO country_singers VALUES(5, 'Chris Stapleton');
+INSERT INTO country_singers VALUES(6, 'Luke Combs');
+INSERT INTO country_singers VALUES(7, 'Zac Brown');
+INSERT INTO country_singers VALUES(8, 'Miranda Lambert');
+INSERT INTO country_singers VALUES(9, 'Dolly Parton');
+INSERT INTO country_singers VALUES(10, 'Carrie Underwood');
+
+CREATE TABLE songs (id INTEGER PRIMARY KEY AUTOINCREMENT, country_singers_id INTEGER, song_title TEXT, release_year INTEGER);
+
+INSERT INTO songs VALUES(1, 1, 'Live Like You Were Dying', 2004);
+INSERT INTO songs VALUES(2, 1, 'Something Like That', 1999);
+INSERT INTO songs VALUES(3, 2, 'Check Yes or No', 1995);
+INSERT INTO songs VALUES(4, 2, 'Carrying Your Love With Me', 1997);
+INSERT INTO songs VALUES(5, 3, 'Whiskey Lullaby', 2003);
+INSERT INTO songs VALUES(6, 3, 'Mud on the Tires', 2003);
+INSERT INTO songs VALUES(7, 4, 'Doing Life With Me', 2021);
+INSERT INTO songs VALUES(8, 4, 'Springsteen', 2011);
+INSERT INTO songs VALUES(9, 5, 'Tennessee Whiskey', 2015);
+INSERT INTO songs VALUES(10, 5, 'Slow Simple Song', 2017);
+INSERT INTO songs VALUES(11, 6, 'When It Rains It Pours', 2017);
+INSERT INTO songs VALUES(12, 6, 'Doin This', 2022);
+INSERT INTO songs VALUES(13, 7, 'Chicken Fried', 2005);
+INSERT INTO songs VALUES(14, 7, 'Knee Deep', 2010);
+INSERT INTO songs VALUES(15, 8, 'Gunpowder & Lead', 2007);
+INSERT INTO songs VALUES(16, 8, 'Heart Like Mine', 2009);
+INSERT INTO songs VALUES(17, 9, 'Jolene', 1974);
+INSERT INTO songs VALUES(18, 9, '9 to 5', 1980);
+INSERT INTO songs VALUES(19, 10, 'Jesus, Take the Wheel', 2005);
+INSERT INTO songs VALUES(20, 10, 'Before He Cheats', 2005);
+
+
+SELECT c.name, s.song_title
+FROM country_singers AS c
+JOIN songs AS s
+ON c.id = s.country_singers_id;
+
+SELECT s.song_title 
+FROM country_singers AS c
+JOIN songs AS s
+ON c.id = s.country_singers_id
+WHERE c.name = 'Dolly Parton';
+
+SELECT c.name, s.song_title, s. release_year
+FROM country_singers AS c
+JOIN songs AS s
+ON c.id = s.country_singers_id
+WHERE release_year < 2000
+ORDER BY release_year;
+
+SELECT s.song_title, s. release_year
+FROM country_singers AS c
+JOIN songs AS s
+ON c.id = s.country_singers_id
+WHERE release_year BETWEEN 2000 AND 2010
+ORDER BY release_year;
+
+SELECT c.name, s.song_title, 
+    CASE WHEN s.release_year < 2000 THEN 'Classic Country'
+    WHEN s.release_year < 2011 THEN '2000s Country'
+    ELSE 'Modern Country'
+    END AS era
+FROM country_singers AS c
+JOIN songs AS s
+ON c.id = s.country_singers_id;
