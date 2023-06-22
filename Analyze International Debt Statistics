@@ -7,23 +7,20 @@ LIMIT 10;
     
 Find the number of distinct countries.
 
-SELECT 
-    COUNT(DISTINCT country_name) AS total_distinct_countries
+SELECT COUNT(DISTINCT country_name) AS total_distinct_countries
 FROM international_debt;
 
 
 Extract the unique debt indicators in the table.
 
-SELECT 
-    DISTINCT indicator_code AS distinct_debt_indicators
+SELECT DISTINCT indicator_code AS distinct_debt_indicators
 FROM international_debt
 ORDER BY distinct_debt_indicators;
 
 
 Find out the total amount of debt as reflected in the table.
 
-SELECT 
-    ROUND(SUM(debt)/1000000, 2) AS total_debt
+SELECT ROUND(SUM(debt)/1000000, 2) AS total_debt
 FROM international_debt; 
 
 
