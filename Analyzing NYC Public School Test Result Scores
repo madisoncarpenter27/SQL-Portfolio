@@ -15,8 +15,7 @@ FROM schools;
 
 Find how many unique schools there are based on building code.
 
-SELECT 
-    COUNT(DISTINCT building_code) AS num_school_buildings
+SELECT COUNT(DISTINCT building_code) AS num_school_buildings
 FROM schools;
 
 
@@ -32,8 +31,7 @@ ORDER BY average_math DESC;
 
 Find the lowest average reading score.
 
-SELECT 
-    MIN(average_reading) AS lowest_reading
+SELECT MIN(average_reading) AS lowest_reading
 FROM schools;
 
 
