@@ -12,12 +12,15 @@ SELECT COUNT(*)
 FROM game_sales AS g
 LEFT JOIN reviews AS r
 ON g.game = r.game
-WHERE critic_score IS NULL AND user_score IS NULL;
+WHERE critic_score IS NULL 
+    AND user_score IS NULL;
 
 
 Find the years with the highest average critic_score.
 
-SELECT year, ROUND(AVG(critic_score),2) AS avg_critic_score
+SELECT 
+    year, 
+    ROUND(AVG(critic_score),2) AS avg_critic_score
 FROM game_sales AS g
 INNER JOIN reviews AS r
 ON g.game = r.game
@@ -28,7 +31,10 @@ LIMIT 10;
 
 Find game critics' ten favorite years, this time with the stipulation that a year must have more than four games released in order to be considered.
 
-SELECT year, COUNT(*) AS num_games, ROUND(AVG(critic_score),2) AS avg_critic_score
+SELECT 
+    year, 
+    COUNT(*) AS num_games, 
+    ROUND(AVG(critic_score),2) AS avg_critic_score
 FROM game_sales AS g
 INNER JOIN reviews AS r
 ON g.game = r.game
@@ -40,7 +46,9 @@ LIMIT 10;
 
 Use set theory to find the years that were on our first critics' favorite list but not the second.
 
-SELECT year, avg_critic_score
+SELECT 
+    year, 
+    avg_critic_score
 FROM top_critic_years
 EXCEPT 
 SELECT year, avg_critic_score
@@ -50,7 +58,10 @@ ORDER BY avg_critic_score DESC;
 
 Update your query from Task Four so that it returns years with ten highest avg_user_score values.
 
-SELECT year, ROUND(AVG(user_score),2) AS avg_user_score, COUNT(*) AS num_games
+SELECT 
+    year, 
+    ROUND(AVG(user_score),2) AS avg_user_score, 
+    COUNT(*) AS num_games
 FROM game_sales AS g
 INNER JOIN reviews AS r
 ON g.game = r.game
@@ -71,7 +82,9 @@ FROM top_user_years_more_than_four_games;
 
 Add a column showing total games_sold in each year to the table you created in the previous task.
 
-SELECT year, SUM(games_sold) AS total_games_sold
+SELECT 
+    year, 
+    SUM(games_sold) AS total_games_sold
 FROM game_sales
 WHERE year IN (SELECT year 
 FROM top_critic_years_more_than_four_games
