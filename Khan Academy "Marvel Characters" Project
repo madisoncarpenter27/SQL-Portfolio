@@ -70,4 +70,5 @@ WHERE speed > 6 OR strength > 6;
 
 SELECT name, popularity
 FROM marvels 
-WHERE popularity > 10 AND alignment = "Good";
+WHERE popularity > 10 
+    AND alignment = "Good";
