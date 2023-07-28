@@ -1,5 +1,4 @@
 # SQL-Portfolio
-**This is a collection of data analyses I have completed in SQL.**
 
 **Loan Approval Analysis:**
 The loan approval dataset is a compilation of financial records and related data used to assess the 
