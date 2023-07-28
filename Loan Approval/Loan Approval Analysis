@@ -21,7 +21,7 @@ The average income of people who were approved for a loan is $5,025,904, while t
 of people who were rejected is $5,113,825. 
 
 
-Is there any correlation between the CIBIL score and loan_status?
+Is there any relationship between the CIBIL score and loan_status?
 
 SELECT 
     loan_status,
@@ -57,3 +57,14 @@ WHERE loan_status = ' Approved'
 GROUP BY loan_status;
 
 The total loan amount granted is $40,496,700,000.
+
+
+Is there a correlation between bank asset value and loan amount for approved loans?
+
+SELECT 
+    CORR(bank_asset_value, loan_amount) AS correlation
+FROM loan_approval
+WHERE loan_status = ' Approved';
+
+With a correlation coefficient of 0.799, there is a strong, positive relationship between 
+the bank's assets and loan amount for approved loans.
