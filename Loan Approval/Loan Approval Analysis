@@ -59,6 +59,20 @@ GROUP BY loan_status;
 The total loan amount granted is $40,496,700,000.
 
 
+How does the distribution of total assets vary for approved and rejected loans?
+
+SELECT 
+    loan_status,
+    ROUND(AVG(residential_assets_value + commercial_assets_value + luxury_assets_value)) AS avg_total_assets,
+    MIN(residential_assets_value + commercial_assets_value + luxury_assets_value) AS min_total_assets,
+    MAX(residential_assets_value + commercial_assets_value + luxury_assets_value) AS max_total_assets
+FROM loan_approval
+GROUP BY loan_status;
+
+For people approved for a loan, average total assets are 27417771, minimum total assets are 500000, and maximum total assets are 81700000.
+For people rejected for a loan, average total assets are 27826162, minimum total assets are 200000, and maximum total assets are 79600000.
+
+
 Is there a correlation between bank asset value and loan amount for approved loans?
 
 SELECT 
