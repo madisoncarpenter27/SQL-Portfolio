@@ -1,1 +1,59 @@
+What is the overall approval rate of loans in the data set?
 
+SELECT 
+    loan_status, 
+    COUNT(*) AS num_loans,
+    (COUNT(*) * 100 / (SELECT COUNT(*) FROM loan_approval) ) AS approval_rate
+FROM loan_approval
+GROUP BY loan_status;
+
+In this data set, 62% of loans have been approved, and 37% of loans have been rejected.
+
+
+How does the average income differ between approved and rejected loans?
+
+SELECT loan_status,
+	ROUND(AVG(income_annum))
+FROM loan_approval
+GROUP BY loan_status;
+
+The average income of people who were approved for a loan is $5,025,904, while the average income 
+of people who were rejected is $5,113,825. 
+
+
+Is there any correlation between the CIBIL score and loan_status?
+
+SELECT 
+    loan_status,
+    ROUND(AVG(cibil_score)) AS avg_cibil_score,
+FROM loan_approval
+GROUP BY loan_status;
+
+The average CIBIL score of people approved for loans is 703, while the average score of people rejected is 429.
+
+
+Are there any significant differences in the loan_amount based on loan_status and education?
+
+SELECT 
+    loan_status,
+    education,
+    AVG(loan_amount) AS average_loan_amount
+FROM loan_approval
+GROUP BY loan_status, education;
+
+For people who are approved and are graduates, the average loan amount is $15,234,205.
+For people who are approved and are not graduates, the average loan amount is $15,260,516.
+For people who are rejected and are graduates, the average loan amount is $15,220,745.
+For people who are rejected and are not graduates, the average loan amount is $14,672,401.
+
+
+What is the total loan amount granted for people who were approved for a loan?
+
+SELECT 
+    loan_status,
+    SUM(loan_amount) AS total_loan_amount
+FROM loan_approval
+WHERE loan_status = ' Approved'
+GROUP BY loan_status;
+
+The total loan amount granted is $40,496,700,000.
