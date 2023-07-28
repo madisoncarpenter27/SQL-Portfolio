@@ -5,7 +5,8 @@
 The loan approval dataset is a compilation of financial records and related data used to assess the 
 eligibility of individuals or organizations seeking loans from a lending institution. It includes information 
 such as applicants' income, credit scores (CIBIL scores), the amount of loan requested, loan terms, the value 
-of assets, educational background, and the final loan status (approved, rejected, etc.). 
+of assets, educational background, and the final loan status (approved, rejected, etc.). Presented below are the 
+findings derived from the comprehensive analysis I have conducted.
 
 **1.** With an overall approval rate of 62%, the dataset indicates that the majority of loans have been approved. 
    It suggests that the bank has not been overly conservative or lenient in granting loans.
