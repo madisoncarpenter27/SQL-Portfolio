@@ -1,17 +1,8 @@
-How does the total revenue for Alabama schools vary from 1993 - 2016?
-
 SELECT year,
        total_revenue
 FROM alabama
 ORDER BY year;
 
-1993 - 2827391, 1994 - 2970223, 1995 - 3367437, 1996 - 3365113, 1997 - 3981788, 1998 - 4140537, 1999 - 4471546
-2000 - 4885917, 2001 - 4832946, 2002 - 5128559, 2003 - 5196054, 2004 - 5356113, 2005 - 5889966, 2006 - 6364028
-2007 - 7069040, 2008 - 7726213, 2009 - 7186390, 2010 - 7281058, 2011 - 7376725, 2012 - 7136949, 2013 - 7197439
-2014 - 7357267, 2015 - 7360222, 2016 - 7498567
-
-What is the distribution of expenditure categories as a percentage of the total expenditure across all years (1993 - 2016)
-in Alabama?
 
 SELECT ROUND(AVG(instruction_expenditure * 100 / total_expenditure) , 2) AS percent_instruction,
        ROUND(AVG(support_services_expenditure * 100 / total_expenditure) , 2) AS percent_support_services,
@@ -19,9 +10,6 @@ SELECT ROUND(AVG(instruction_expenditure * 100 / total_expenditure) , 2) AS perc
        ROUND(AVG(capital_outlay_expenditure * 100 / total_expenditure) , 2) AS percent_capital_outlay
 FROM alabama;
 
-percent_intruction - 51.54, percent_support_services - 28.58, percent_other - 7.58, percent_capital_outlay - 8.67
-
-How many school districts have an average total revenue greater than $100,000?
 
 SELECT COUNT(*) AS num_districts
 FROM (SELECT name, 
@@ -30,9 +18,6 @@ FROM (SELECT name,
       GROUP BY name
       HAVING avg(totalrev) > 100000) AS districts_above_100k;
 
-11 districts have an average revenue above 100k.
-
-Which school district had the highest total revenue in 2016?
 
 SELECT yrdata,
        name,
@@ -42,9 +27,6 @@ WHERE yrdata = 2016
 ORDER BY totalrev DESC
 LIMIT 1;
 
-Mobile County School District - 564939
-
-Which school district had the highest total expenditure in 2016? x
 
 SELECT yrdata,
        name,
@@ -54,9 +36,6 @@ WHERE yrdata = 2016
 ORDER BY totalexp DESC
 LIMIT 1;
 
-Mobile County School District - 606882
-
-Which school district had the greatest enrollment in 2016?
 
 SELECT name,
        enroll
@@ -66,9 +45,6 @@ WHERE enroll IN
 	  FROM districts
 	  WHERE yrdata = 2016);
 
-Mobile County School District - 57581
-
-How do school districts with different enrollment sizes compare in terms of total revenue and expenditures?
 
 SELECT CASE WHEN enroll < 1000 THEN 'small'
 	    WHEN enroll > 1000 AND enroll < 10000 THEN 'medium'
@@ -78,7 +54,3 @@ SELECT CASE WHEN enroll < 1000 THEN 'small'
        ROUND(AVG(totalexp)) AS avg_total_expenditure
 FROM districts
 GROUP BY enrollment_size;
-
-Small enrollment: avg_total_revenue - 7320, avg_total_expenditure - 6664
-Medium enrollment: avg_total_revenue - 28434, avg_total_expenditure - 28971
-Large enrollment: avg_total_revenue - 200648, avg_total_expenditure - 208409
