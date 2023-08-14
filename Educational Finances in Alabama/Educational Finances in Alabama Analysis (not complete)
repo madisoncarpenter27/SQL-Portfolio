@@ -1,7 +1,7 @@
 How does the total revenue for Alabama schools vary from 1993 - 2016?
 
 SELECT year,
-	   total_revenue
+       total_revenue
 FROM alabama
 ORDER BY year;
 
@@ -14,9 +14,9 @@ What is the distribution of expenditure categories as a percentage of the total 
 in Alabama?
 
 SELECT ROUND(AVG(instruction_expenditure * 100 / total_expenditure) , 2) AS percent_instruction,
-	     ROUND(AVG(support_services_expenditure * 100 / total_expenditure) , 2) AS percent_support_services,
-	     ROUND(AVG(other_expenditure * 100 / total_expenditure) , 2) AS percent_other,
-	     ROUND(AVG(capital_outlay_expenditure * 100 / total_expenditure) , 2) AS percent_capital_outlay
+       ROUND(AVG(support_services_expenditure * 100 / total_expenditure) , 2) AS percent_support_services,
+       ROUND(AVG(other_expenditure * 100 / total_expenditure) , 2) AS percent_other,
+       ROUND(AVG(capital_outlay_expenditure * 100 / total_expenditure) , 2) AS percent_capital_outlay
 FROM alabama;
 
 percent_intruction - 51.54, percent_support_services - 28.58, percent_other - 7.58, percent_capital_outlay - 8.67
@@ -25,10 +25,10 @@ How many school districts have an average total revenue greater than $100,000?
 
 SELECT COUNT(*) AS num_districts
 FROM (SELECT name, 
-	        AVG(totalrev) AS avg_total_revenue
-	   FROM districts
-     GROUP BY name
-     HAVING avg(totalrev) > 100000) AS districts_above_100k;
+	     AVG(totalrev) AS avg_total_revenue
+      FROM districts
+      GROUP BY name
+      HAVING avg(totalrev) > 100000) AS districts_above_100k;
 
 11 districts have an average revenue above 100k.
 
@@ -47,8 +47,8 @@ Mobile County School District - 564939
 Which school district had the highest total expenditure in 2016? x
 
 SELECT yrdata,
-	   name,
-	   totalexp
+       name,
+       totalexp
 FROM districts
 WHERE yrdata = 2016
 ORDER BY totalexp DESC
@@ -59,7 +59,7 @@ Mobile County School District - 606882
 Which school district had the greatest enrollment in 2016?
 
 SELECT name,
-	   enroll
+       enroll
 FROM districts
 WHERE enroll IN
      (SELECT MAX(enroll)
@@ -87,10 +87,10 @@ How does Brewton City Schools' (my school district) expenditure on instruction, 
 and other categories change over time?
 
 SELECT yrdata, 
-	   enroll, 
+       enroll, 
        tcurinst AS instruction_expenditure, 
-	   tcurssvc AS support_services_expenditure, 
-	   tcuronon AS other_expenditure
+       tcurssvc AS support_services_expenditure, 
+       tcuronon AS other_expenditure
 FROM districts
 WHERE name ILIKE('%brewton%')
 ORDER BY yrdata;
