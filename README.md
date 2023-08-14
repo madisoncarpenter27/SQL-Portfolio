@@ -23,6 +23,8 @@ findings derived from the comprehensive analysis I have conducted.
    financial strength enables it to offer larger loans to approved applicants.
 
 
+
+
 **Educational Finances in Alabama Analysis**
 The annual assessment of elementary and high school finances is conducted by the United States Census Bureau. This financial data has been arranged in two separate files: "districts.csv" for school districts and "alabama.csv" for the state of Alabama. This data spans the years 1993 to 2016. Initially, the dataset encompassed financial data from all 50 states and the District of Columbia. However, I narrowed down the dataset to focus exclusively on the state of Alabama and its corresponding school districts. I then performed data cleaning to address any irregularities in the naming conventions of school districts. Presented below are findings from my financial analysis.
 
