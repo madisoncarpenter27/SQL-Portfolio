@@ -25,7 +25,7 @@ findings derived from the comprehensive analysis I have conducted.
 
 
 
-**Educational Finances in Alabama Analysis**
+**Educational Finances in Alabama Analysis:**
 The annual assessment of elementary and high school finances is conducted by the United States Census Bureau. This financial data has been arranged in two separate files: "districts.csv" for school districts and "alabama.csv" for the state of Alabama. This data spans the years 1993 to 2016. Initially, the dataset encompassed financial data from all 50 states and the District of Columbia. However, I narrowed down the dataset to focus exclusively on the state of Alabama and its corresponding school districts. I then performed data cleaning to address any irregularities in the naming conventions of school districts. Presented below are findings from my financial analysis.
 
 **1.** The provided data showcases an increasing trend in the total revenue of Alabama schools from 1993 to 2016. This steady growth suggests a positive trajectory in funding over these years, which could signify an increased investment in education and improved resources for students.
