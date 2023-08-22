@@ -2,6 +2,6 @@ CREATE TABLE transactions (
 		  id SERIAL PRIMARY KEY,
 		  category_id INTEGER,
 		  date DATE,
-	    description VARCHAR,
+	          description VARCHAR,
 		  amount NUMERIC
 );
