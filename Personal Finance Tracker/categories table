@@ -10,4 +10,4 @@ INSERT INTO categories (name) VALUES ('income'),
 				     ('dining_out'),
 				     ('shopping'),
 				     ('entertainment')
-				     ('groceries);	
+				     ('savings');	
