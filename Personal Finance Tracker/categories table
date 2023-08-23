@@ -9,5 +9,4 @@ INSERT INTO categories (name) VALUES ('income'),
 				     ('personal_bills'),
 				     ('dining_out'),
 				     ('shopping'),
-				     ('entertainment')
-				     ('savings');	
+				     ('entertainment');	
