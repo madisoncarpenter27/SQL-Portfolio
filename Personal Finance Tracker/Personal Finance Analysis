@@ -1,1 +1,37 @@
+What was my total income and total amount spent for July and August?
+
+SELECT SUM(CASE WHEN category_id = 1 THEN amount ELSE 0 END) AS total_income,
+	   SUM(CASE WHEN category_id != 1 THEN amount ELSE 0 END) AS total_expenses
+FROM transactions;
+
+total_income for july and august - 8958.42, total_expenses for july and august - 4295.92
+
+
+What category did i spend the most money on?
+
+SELECT c.name,
+	   SUM(t.amount) as total_spent
+FROM categories AS c
+INNER JOIN transactions AS t
+ON c.category_id = t.category_id
+WHERE t.category_id != 1
+GROUP BY c.name
+ORDER BY total_spent DESC
+LIMIT 1;
+
+I spent the most on personal bills ($2820.00).
+
+
+In which month did I spend the most money? 
+
+SELECT
+    EXTRACT(MONTH FROM date) AS month,
+    SUM(amount) AS total_expenses
+FROM transactions
+WHERE category_id != 1
+GROUP BY month
+ORDER BY month;
+
+I spent the most in July.
+
 
