@@ -4,9 +4,10 @@ CREATE TABLE categories(
 );
 
 INSERT INTO categories (name) VALUES ('income'),
-									                   ('rent'),
-									                   ('utilities'),
-									                   ('personal_bills'),
-									                   ('dining_out'),
-									                   ('shopping'),
-									                   ('entertainment');
+				     ('rent'),
+				     ('utilities'),
+				     ('personal_bills'),
+				     ('dining_out'),
+				     ('shopping'),
+				     ('entertainment')
+				     ('groceries);	
