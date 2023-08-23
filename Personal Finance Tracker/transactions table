@@ -34,3 +34,8 @@ INSERT INTO transactions (date, description, amount, category_id)
 		      ('2023-08-22', 'Poshmark', 378.95, 1),
 		      ('2023-08-22', 'Discover Payment', 230.00, 4),
 		      ('2023-08-22', 'Car Payment', 400.00, 4);
+
+
+UPDATE transactions
+SET category_id = 3
+WHERE description = 'Water and Power';
