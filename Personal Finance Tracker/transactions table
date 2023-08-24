@@ -1,9 +1,9 @@
 CREATE TABLE transactions(
-		transaction_id SERIAL NOT NULL PRIMARY KEY,
-		date DATE,
-		description VARCHAR(100),
-		amount NUMERIC,
-		category_id INT
+	         transaction_id SERIAL NOT NULL PRIMARY KEY,
+		     date DATE,
+		     description VARCHAR(100),
+		     amount NUMERIC,
+		     category_id INT
 );
 
 INSERT INTO transactions (date, description, amount, category_id)
