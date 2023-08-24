@@ -1,27 +1,41 @@
-What wer my total income, expenses, and savaings for June - August?
+What were my total income, expenses, and savings for June - August?
 
 SELECT SUM(CASE WHEN category_id = 1 THEN amount ELSE 0 END) AS total_income,
-       SUM(CASE WHEN category_id NOT IN (1,8) THEN amount ELSE 0 END) AS total_expenses,
+       SUM(CASE WHEN category_id NOT IN (1, 8) THEN amount ELSE 0 END) AS total_expenses,
        SUM(CASE WHEN category_id = 8 THEN amount ELSE 0 END) AS total_savings
 FROM transactions;
 
 total_income - 12032.34, total_expenses - 7435.99, total_savings - 3800.00
 
 
-
-What category did I spend the most money on?
+Which category did I spend the most money on?
 
 SELECT c.name,
-	   SUM(t.amount) as total_spent
+       SUM(t.amount) as total_spent
 FROM categories AS c
 INNER JOIN transactions AS t
 ON c.category_id = t.category_id
-WHERE t.category_id != 1
+WHERE t.category_id NOT IN (1, 8)
 GROUP BY c.name
 ORDER BY total_spent DESC
 LIMIT 1;
 
 I spent the most on personal bills ($5210.00).
+
+What percent of my personal bills went towards credit card payments? 
+
+WITH personal_bills AS (SELECT SUM(amount) AS total_personal_bills
+			FROM transactions 
+                        WHERE category_id = 4),
+						
+cc_payment AS (SELECT SUM(amount) AS total_cc_payment
+	       FROM transactions
+	       WHERE description IN ('Discover payment', 'joint card payment'))
+
+SELECT ROUND((total_cc_payment / total_personal_bills * 100), 2) AS percent_cc_payment
+FROM personal_bills, cc_payment;
+
+63.72% of my personal bills go towards credit card payments.
 
 
 In which month did I spend the most money? 
