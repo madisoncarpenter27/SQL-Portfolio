@@ -35,3 +35,14 @@ The annual assessment of elementary and high school finances is conducted by the
 **5.** Similarly, the Mobile County School District recorded the highest total expenditure in 2016. This indicates a significant investment in educational activities and resources to provide a well-rounded learning environment.
 **6.** Moreover, the Mobile County School District recorded the highest enrollment in 2016. A larger enrollment attracts more funding but also demands increased expenditure to accommodate diverse educational needs. 
 **7.** Categorizing districts by enrollment reveals a trend. Larger districts seem to exhibit higher average revenue and expenditure, implying a potential correlation between student count and financial capability.
+
+
+
+**Personal Finance Analysis:**
+I undertook a personal finance tracker project to manage and understand my financial behaviors over the last three months. I structured the project by creating two essential tables: categories and transactions. The categories include income, rent, utilities, personal_bills, dining_out, shopping, entertainment, and savings.
+
+**1.** I calculated the total income, expenses, and savings for the months of June through August. The resulting insights showed that my total income over the period was $12,032.34, total expenses summed up to $7,435.99, and I managed to save $3,800.00. These insights offer a clear view of my financial activity and emphasize my successful focus on prioritizing savings in my financial journey.
+**2.** The analysis indicated that my highest expenditure was on personal bills, amounting to $5,210.00. This category does include credit card bills, and certain credit card purchases overlap with categories such as shopping and dining out. This contributes to the inflated amount within the personal bills category. Regardless, I am adhering to a well-maintained spending budget.
+**3.** I determined that 63.72% of my personal bills are dedicated to credit card payments. I've learned how credit card obligations impact my finances. This knowledge will help me make wiser choices about credit card usage, manage payments effectively, and consider ways to reduce credit card-related costs.
+**4.** I identified the month in which I made the highest expenditures. The outcome was that July was the most significant spending month, totaling $2,700.35. This knowledge allows me to reflect on the factors that might have contributed to higher spending during that month and make informed decisions to manage my expenses more effectively in the future.
+**5.** I spent $432.81 on non-essential categories, namely dining out, shopping, and entertainment. This is relatively low for three months of spending. As previously noted, these categories overlap with credit card payments, underscoring the need to be mindful of credit card spending since these transactions don't immediately impact my checking account.
