@@ -35,7 +35,7 @@ The annual assessment of elementary and high school finances is conducted by the
 **7.** Categorizing districts by enrollment reveals a trend. Larger districts seem to exhibit higher average revenue and expenditure, implying a potential correlation between student count and financial capability.
 
 ## **Personal Finance Analysis:**
-I undertook a personal finance tracker project to manage and understand my financial behaviors over the last three months. I structured the project by creating two essential tables: categories and transactions. The categories include income, rent, utilities, personal_bills, dining_out, shopping, entertainment, and savings.
+I undertook a personal finance tracker project to manage and understand my financial behaviors over the last three months. I structured the project by creating two essential tables: categories and transactions. The categories include income, rent, utilities, personal bills, dining out, shopping, entertainment, and savings.
 
 **1.** I calculated the total income, expenses, and savings for the months of June through August. The resulting insights showed that my total income over the period was $12,032.34, total expenses summed up to $7,435.99, and I managed to save $3,800.00. These insights offer a clear view of my financial activity and emphasize my successful focus on prioritizing savings in my financial journey.
 **2.** The analysis indicated that my highest expenditure was on personal bills, amounting to $5,210.00. This category does include credit card bills, and certain credit card purchases overlap with categories such as shopping and dining out. This contributes to the inflated amount within the personal bills category. Regardless, I am adhering to a well-maintained spending budget.
