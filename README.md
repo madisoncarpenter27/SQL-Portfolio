@@ -1,4 +1,5 @@
 # SQL-Portfolio
+This repository showcases a range of projects in PostgresSQL, completed both independently and as part of SQL and data analytics courses. The README highlights my independent analyses.
 
 **Loan Approval Analysis:**
 The loan approval dataset is a compilation of financial records and related data used to assess the 
