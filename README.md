@@ -23,10 +23,7 @@ findings derived from the comprehensive analysis I have conducted.
 **7.** The strong positive correlation (0.799) between the bank's assets and approved loan amounts indicates that the bank's
    financial strength enables it to offer larger loans to approved applicants.
 
-
-
-
-**Educational Finances in Alabama Analysis:**
+## **Educational Finances in Alabama Analysis:**
 The annual assessment of elementary and high school finances is conducted by the United States Census Bureau. This financial data has been arranged in two separate files: "districts.csv" for school districts and "alabama.csv" for the state of Alabama. This data spans the years 1993 to 2016. Initially, the dataset encompassed financial data from all 50 states and the District of Columbia. However, I narrowed down the dataset to focus exclusively on the state of Alabama and its corresponding school districts. I then performed data cleaning to address any irregularities in the naming conventions of school districts. Presented below are findings from my financial analysis.
 
 **1.** The provided data showcases an increasing trend in the total revenue of Alabama schools from 1993 to 2016. This steady growth suggests a positive trajectory in funding over these years, which could signify an increased investment in education and improved resources for students.
@@ -37,9 +34,7 @@ The annual assessment of elementary and high school finances is conducted by the
 **6.** Moreover, the Mobile County School District recorded the highest enrollment in 2016. A larger enrollment attracts more funding but also demands increased expenditure to accommodate diverse educational needs. 
 **7.** Categorizing districts by enrollment reveals a trend. Larger districts seem to exhibit higher average revenue and expenditure, implying a potential correlation between student count and financial capability.
 
-
-
-**Personal Finance Analysis:**
+## **Personal Finance Analysis:**
 I undertook a personal finance tracker project to manage and understand my financial behaviors over the last three months. I structured the project by creating two essential tables: categories and transactions. The categories include income, rent, utilities, personal_bills, dining_out, shopping, entertainment, and savings.
 
 **1.** I calculated the total income, expenses, and savings for the months of June through August. The resulting insights showed that my total income over the period was $12,032.34, total expenses summed up to $7,435.99, and I managed to save $3,800.00. These insights offer a clear view of my financial activity and emphasize my successful focus on prioritizing savings in my financial journey.
