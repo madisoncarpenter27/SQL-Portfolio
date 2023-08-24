@@ -34,6 +34,7 @@ INSERT INTO transactions (date, description, amount, category_id)
 			  ('2023-08-01', 'August rent', 450.00, 2),
 			  ('2023-08-01', 'water & power', 133.00, 3),
 			  ('2023-08-01', 'joint card payment', 931.00, 4),
+			  ('2023-08-01', 'transfer to savings', 2800.00, 8),	
 			  ('2023-08-02', 'SiriusXM subscription', 16.98, 7),
 			  ('2023-08-06', 'Starbucks', 6.86, 5),
 			  ('2023-08-07', 'Sand Shaker', 25.30, 7),
