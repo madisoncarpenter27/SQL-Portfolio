@@ -1,7 +1,7 @@
 # SQL-Portfolio
 This repository showcases a range of projects in PostgresSQL, completed both independently and as part of SQL and data analytics courses. The README highlights my independent analyses.
 
-**Loan Approval Analysis:**
+##**Loan Approval Analysis:**
 The loan approval dataset is a compilation of financial records and related data used to assess the 
 eligibility of individuals or organizations seeking loans from a lending institution. It includes information 
 such as applicants' income, credit scores (CIBIL scores), the amount of loan requested, loan terms, the value 
