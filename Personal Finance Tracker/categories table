@@ -3,10 +3,11 @@ CREATE TABLE categories(
 	 name VARCHAR(100)
 );
 
-INSERT INTO categories (name) VALUES ('income'),
-				     ('savings'),
-				     ('rent'),
-				     ('utilities'),
-				     ('personal_bills'),
-				     ('dining_out'),
-				     ('entertainment');	
+INSERT INTO categories (name) 
+       VALUES ('income'),
+	      ('savings'),
+	      ('rent'),
+	      ('utilities'),
+	      ('personal_bills'),
+	      ('dining_out'),
+	      ('entertainment');	
