@@ -54,4 +54,11 @@ I spent the most in July (2700.35).
 
 How much money did I spend on non-essential categories i.e. dining out, shopping, and entertainment?
 
+SELECT SUM(amount) AS non_essential_spending
+FROM transactions
+WHERE category_id IN (5, 6, 7);
+
+I spent $432.81 on the non-essential categories.
+
+
 
