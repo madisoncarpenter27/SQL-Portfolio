@@ -22,6 +22,7 @@ LIMIT 1;
 
 I spent the most on personal bills ($5210.00).
 
+
 What percent of my personal bills went towards credit card payments? 
 
 WITH personal_bills AS (SELECT SUM(amount) AS total_personal_bills
@@ -49,5 +50,8 @@ GROUP BY month
 ORDER BY month;
 
 I spent the most in July (2700.35).
+
+
+How much money did I spend on non-essential categories i.e. dining out, shopping, and entertainment?
 
 
