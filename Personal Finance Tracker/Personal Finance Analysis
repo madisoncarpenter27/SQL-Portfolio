@@ -1,4 +1,4 @@
-What was my total income and total expense for June - August?
+What wer my total income, expenses, and savaings for June - August?
 
 SELECT SUM(CASE WHEN category_id = 1 THEN amount ELSE 0 END) AS total_income,
        SUM(CASE WHEN category_id NOT IN (1,8) THEN amount ELSE 0 END) AS total_expenses,
@@ -6,6 +6,7 @@ SELECT SUM(CASE WHEN category_id = 1 THEN amount ELSE 0 END) AS total_income,
 FROM transactions;
 
 total_income - 12032.34, total_expenses - 7435.99, total_savings - 3800.00
+
 
 
 What category did I spend the most money on?
