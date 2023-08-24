@@ -43,9 +43,9 @@ INSERT INTO transactions (date, description, amount, category_id)
 	    ('2023-08-07', 'Venmo transfer', 132.00, 1),
 	    ('2023-08-08', 'Starbucks', 6.97, 5),
 	    ('2023-08-11', 'gas', 46.68, 3),
-		      ('2023-08-14', 'car insurance & phone bill', 230.00, 4),
-	          ('2023-08-17', 'Jalisco', 16.65, 5),
-		      ('2023-08-17', 'football tickers', 107.00, 7),
-		      ('2023-08-22', 'Poshmark', 378.95, 1),
-		      ('2023-08-22', 'Discover payment', 230.00, 4),
-		      ('2023-08-22', 'car payment', 400.00, 4);
+	    ('2023-08-14', 'car insurance & phone bill', 230.00, 4),
+	    ('2023-08-17', 'Jalisco', 16.65, 5),
+	    ('2023-08-17', 'football tickers', 107.00, 7),
+	    ('2023-08-22', 'Poshmark', 378.95, 1),
+	    ('2023-08-22', 'Discover payment', 230.00, 4),
+	    ('2023-08-22', 'car payment', 400.00, 4);
